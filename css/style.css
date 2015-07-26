@@ -1,13 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,800,400|Roboto+Slab:400,300,100,700);
+
+/*  Basic Page CSS */
 body {
-	padding-top: 50px;
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 300;
+	font-size: 2em;
+	position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	margin: 0;
 }
 img {
 	max-width: 200px;
 }
-nav.navbar {
-	border-radius: 0;
-	border: 0;
+
+/*  Header Navigation */
+header .navbar {
+  padding: 30px 0;
 }
+header .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+header .navbar-default .navbar-nav a {
+	color: white;
+	padding: 5px 8px;
+}
+header .navbar-default .navbar-nav a:hover {
+	color: #EEC856;
+}
+header .navbar-default .navbar-nav .active a {
+	font-weight: 700;
+	color: #eec856;
+	background: transparent;
+	border-bottom: 4px solid #eec856
+	text-shadow: none;
+}
+header .navbar-default .navbar-nav .active a:hover {
+	color: #E15D5F;
+	background: transparent;
+	text-shadow: none;
+}
+
+/*  Footer Navigation */
 footer .navbar-default {
 	background-color: transparent;
+}
+
+/*  Page */
+.page {
+	padding: 50px 0;
+}
+.page h2 {
+	text-align: center;
+	margin-bottom: 30px;
 }
