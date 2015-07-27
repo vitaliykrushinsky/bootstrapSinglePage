@@ -1,5 +1,6 @@
 $(function() {
 	"use strict";
+	
 	//variable for menu height
 	var topoffset = 50;
 	//amount of element carousel
