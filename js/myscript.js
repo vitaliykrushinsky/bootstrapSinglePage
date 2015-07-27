@@ -1,13 +1,15 @@
 $(function() {
-    "use strict";
-    
-    $('.carousel').carousel({
-        interval: false,
-        offset: 50
-    });
-    
+	"use strict";
+	//variable for menu height
+	var topoffset = 50;
+	//amount of element carousel
+	var slideqty = $('#featured .item').length;
+   
     //activate scrollspy
-    $('body').scrollspy({ target: 'header .navbar-fixed-top' });
+    $('body').scrollspy({ 
+		target: 'header .navbar-fixed-top',
+		offset: topoffset
+	});
     
     //store location on the current page
         var hash = $(this).find('li.active a').attr('href');
@@ -39,12 +41,22 @@ $(function() {
 		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 		  if (target.length) {
 			$('html,body').animate({
-			  scrollTop: target.offset().top-topoffset+2
+			  scrollTop: target.offset().top - topoffset + 2
 			}, 500);
 			return false;
 		  } //target.length
 		} //click function
   	}); //smooth scrolling
+	
+	//Generate carousel indicators
+	for (var i = 0; i < slideqty; i++) {
+		var inserttext = '<li data-target="#featured" data-slide-to="' + i + '"></li>';
+		$('#featured .carousel-indicators').append(inserttext);
+	}
+	
+	$('.carousel').carousel({
+        interval: false
+    });
     
 });
 
