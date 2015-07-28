@@ -5,14 +5,33 @@ $(function() {
 	var topoffset = 50;
 	//amount of element carousel
 	var slideqty = $('#featured .item').length;
+	
+	//get height of the window
+	var wheight = $(window).height();
+	
+	//set to window tallness  
+	$('.fullheight').css('height', wheight);
+	
+	//replace img in carousel with background image
+	$('#featured .item img').each(function() {
+		var imgSrc = $(this).attr('src');
+		$(this).parent().css({'background-image' : 'url(' + imgSrc + ')' });
+		$(this).remove();
+	});
+	
+	//adjust height of .fullheight elements on window resize
+	$(window).resize(function() {
+		wheight = $(window).height();
+		$('.fullheight').css('height', wheight);
+	});
    
-    //activate scrollspy
+    //activate scrollspy through jQuery
     $('body').scrollspy({ 
 		target: 'header .navbar-fixed-top',
 		offset: topoffset
 	});
     
-    //store location on the current page
+    //store location on the current page and add inbody class
         var hash = $(this).find('li.active a').attr('href');
         
         if (hash !== '#featured') {

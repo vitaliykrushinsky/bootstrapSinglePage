@@ -135,6 +135,14 @@ header .navbar-default .navbar-toggle .icon-bar {
 	background-image: none;
 }
 
+#featured .item {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
 /*  Page */
 .page {
 	padding: 50px 0;
@@ -222,19 +230,19 @@ and (max-width: 768px) {
 	background-color: rgba(239,240,196,.9);
 }
 #testimonials #janeh {
-	background: url(../images/testimonial-janeh.jpg) no-repeat center;
+	background: url(../images/testimonial-janeh.jpg) no-repeat center center;
 	background-size: cover;
 }
 #testimonials #johnb {
-	background: url(../images/testimonial-johnb.jpg) no-repeat center;
+	background: url(../images/testimonial-johnb.jpg) no-repeat center center;
 	background-size: cover;
 }
 #testimonials #mcphersons {
-	background: url(../images/testimonial-mcphersons.jpg) no-repeat center;
+	background: url(../images/testimonial-mcphersons.jpg) no-repeat center center;
 	background-size: cover;
 }
 #testimonials #lorraines {
-	background: url(../images/testimonial-lorraines.jpg) no-repeat center;
+	background: url(../images/testimonial-lorraines.jpg) no-repeat center center;
 	background-size: cover;
 }
 #testimonials .quote {
