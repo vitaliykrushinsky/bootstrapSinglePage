@@ -104,6 +104,37 @@ header .navbar-default .navbar-toggle .icon-bar {
 	}
 }
 
+/*  Carousel fade */
+.carousel.fade {
+	opacity: 1;
+}
+.carousel.fade .item {
+	transition: opacity ease-out .7s;
+	left: 0;
+	opacity: 0;
+	top: 0;
+	position: absolute;
+	display: block;
+	width: 100%;
+}
+.carousel.fade .item:first-child {
+	top: auto;
+	opacity: 1;
+	position: relative;
+	
+}
+.carousel.fade .item.active {
+	opacity: 1;
+}
+
+.carousel-control {
+	opacity: 0;
+}
+.carousel-control.right,
+.carousel-control.left {
+	background-image: none;
+}
+
 /*  Page */
 .page {
 	padding: 50px 0;
