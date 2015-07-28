@@ -9,6 +9,13 @@ $(function() {
 	//get height of the window
 	var wheight = $(window).height();
 	
+	//get randon number from zero to amount of element carousel
+	var randSlide= Math.floor(Math.random() * slideqty);
+	// "eq" method - returns an element with a specific index number 
+	// of the selected elements. 
+	$('#featured .item').eq(randSlide).addClass('active');
+	
+	
 	//set to window tallness  
 	$('.fullheight').css('height', wheight);
 	
@@ -68,9 +75,14 @@ $(function() {
 		} //click function
   	}); //smooth scrolling
 	
-	//Generate carousel indicators
+	//Generate carousel indicators and indicators randomly selected
 	for (var i = 0; i < slideqty; i++) {
-		var inserttext = '<li data-target="#featured" data-slide-to="' + i + '"></li>';
+		var inserttext = '<li data-target="#featured" data-slide-to="' + i + '"';
+		if(i === randSlide) {
+			inserttext += ' class="active" ';
+		}
+		inserttext += '></li>';
+		
 		$('#featured .carousel-indicators').append(inserttext);
 	}
 	
